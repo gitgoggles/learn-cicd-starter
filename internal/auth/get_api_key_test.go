@@ -13,7 +13,7 @@ func TestGetApiKey(t *testing.T) {
 	got, _ := GetAPIKey(header)
 	want := "supersecret"
 
-	if reflect.DeepEqual(want, got) {
+	if !reflect.DeepEqual(want, got) {
 		t.Fatalf("expected: %v, got: %v", want, got)
 	}
 }
